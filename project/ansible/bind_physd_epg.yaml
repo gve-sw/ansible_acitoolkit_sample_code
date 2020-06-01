@@ -1,0 +1,20 @@
+---
+- name: Testing
+  hosts: localhost
+  vars_files:
+    - vars/vars_domain_binding.yaml
+  gather_facts: yes
+  tasks:
+    - name: Add a new physical domain to EPG binding
+      aci_epg_to_domain:
+        host: "{{ host }}"
+        username: "{{ username }}"
+        password: "{{ password }}"
+        tenant: "{{ tenant }}"
+        use_ssl: no
+        ap: "{{ ap }}"
+        epg: "{{ epg }}"
+        domain: "{{ domain }}"
+        domain_type: phys
+        state: present
+      delegate_to: localhost

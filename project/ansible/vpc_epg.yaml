@@ -1,0 +1,25 @@
+---
+  - name: Testing
+    hosts: localhost
+    vars_files:
+      - vars/vars_epg_binding.yaml
+    gather_facts: yes
+    tasks:
+      - name: Deploy Static Path binding for given EPG
+        aci_static_binding_to_epg:
+          host: "{{ host }}"
+          username: "{{ username }}"
+          password: "{{ password }}"
+          tenant: "{{ tenant }}"
+          use_ssl: no
+          ap: "{{ ap }}"
+          epg: "{{ epg }}"
+          encap_id: 222
+          deploy_immediacy: lazy
+          interface: "{{ vpc }}"
+          leafs: 101-102
+          interface_mode: untagged
+          interface_type: vpc
+          pod_id: 1
+          state: present
+        delegate_to: localhost

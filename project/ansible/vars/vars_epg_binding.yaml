@@ -1,0 +1,8 @@
+ap: ap_name
+domain: domain_name
+epg: epg_name
+host: x.x.x.x
+password: password
+tenant: tenant_name
+username: admin
+vpc: vpc_name
