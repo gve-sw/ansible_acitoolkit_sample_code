@@ -1,13 +1,6 @@
 # ansible_acitoolkit_sample_code
 Code that offers a workflow on adding physical domains to existing EPGs then binding that EPG to an existing Virtual Port Channel
 
-
-
-
-
-| :exclamation:  External repository notice   |
-|:---------------------------|
-| This repository is now mirrored at "PLEASE UPDATE HERE - add External repo URL after code review is completed"  Please inform a https://github.com/gve-sw/ organization admin of any changes to mirror them to the external repo |
 ## Contacts
 * Jorge Banegas
 
